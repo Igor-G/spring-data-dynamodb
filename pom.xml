@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.igor-g</groupId>
     <artifactId>spring-data-dynamodb</artifactId>
-    <version>4.5.1</version>
+    <version>4.5.2-SNAPSHOT</version>
     <name>Spring Data DynamoDb</name>
     <description>
 				Spring Data module providing support for DynamoDb repositories.
@@ -369,7 +369,7 @@
         <url>https://github.com/Igor-G/spring-data-dynamodb</url>
         <connection>scm:git:ssh://github.com/Igor-G/spring-data-dynamodb.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/Igor-G/spring-data-dynamodb.git</developerConnection>
-    <tag>spring-data-dynamodb-4.5.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
     <repositories>
