@@ -179,7 +179,9 @@ public class DynamoDBEntityWithHashAndRangeKeyCriteria<T, ID extends Serializabl
 				queryExpression.setIndexName(getGlobalSecondaryIndexName());
 			}
 		} else {
-			applySortIfSpecified(queryExpression, Arrays.asList(new String[] { getRangeKeyPropertyName() }));
+			List<String> allowedSortProperties = new ArrayList<>(getIndexRangeKeyAttributeNames());
+			allowedSortProperties.add(getRangeKeyPropertyName());
+			applySortIfSpecified(queryExpression,  allowedSortProperties);
 		}
 
 		return queryExpression;

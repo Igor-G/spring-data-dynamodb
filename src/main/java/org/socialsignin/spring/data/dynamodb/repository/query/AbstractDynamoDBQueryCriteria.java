@@ -126,10 +126,6 @@ public abstract class AbstractDynamoDBQueryCriteria<T, ID extends Serializable> 
 	}
 
 	protected void applySortIfSpecified(DynamoDBQueryExpression<T> queryExpression, List<String> permittedPropertyNames) {
-		if (permittedPropertyNames.size() > 1) {
-			throw new UnsupportedOperationException("Can only sort by at most a single range or index range key");
-
-		}
 		if (sort != null) {
 			boolean sortAlreadySet = false;
 			for (Order order : sort) {

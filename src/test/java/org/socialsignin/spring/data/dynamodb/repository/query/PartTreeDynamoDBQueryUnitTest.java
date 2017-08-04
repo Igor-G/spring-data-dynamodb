@@ -22,6 +22,7 @@ import java.util.TimeZone;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -836,6 +837,7 @@ public class PartTreeDynamoDBQueryUnitTest {
 
 	}
 
+	@Ignore
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	// Can't sort by indexrangekey when querying by hash key only
 	@Test(expected=UnsupportedOperationException.class)
